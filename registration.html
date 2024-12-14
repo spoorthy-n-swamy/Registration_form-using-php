@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrationform</title>
+    <link rel="stylesheet" href="r.css">
+</head>
+<body>
+    <div class ="container"><h2>Registration Form</h2>
+        <form action="connect.php" method="post">
+        <div class="form-group">
+        <label for="First Name">First Name:</label>
+        <input type="text" id="First Name" name="first_name" required>
+       <label for="Middle Name">Middle Name:</label>
+        <input type="text" id="Middle Name" name="middle_name" required>
+        <label for="Last Name">Last Name:</label>
+        <input type="text" id="Last Name" name="last_name" required>
+        <label for="Phone Number">Mobile Number:</label>
+        <input type="tel" id="Phone Number" name="phone_number" required pattern="[0-9]{10}" maxlength="10">
+      <label for="email">Email:</label>
+        <input type="email" id="Email" name="email" required>
+        <label for="Password">Password:</label>
+        <div class="password-container">
+     <input type="password" id="Password" name="password" required>
+    <input type="checkbox" id="showPassword" onclick="togglePassword()" class="show-password-checkbox">
+    <label for="showPassword" class="show-password-label">Show Password</label>
+    </div>
+         <label for="dob">Date of Birth:</label>
+         <input type="date" id="dob" name="dob" required>
+        <span id="ageError" style="color: red; display: none;">You must be at least 18 years old.</span>
+        <label>Gender:</label>
+        <div class="gender-options">
+        <label for="Male">Male:</label>
+        <input type="radio" id="Male" Name="gender" value="Male">
+        <label for="Female">Female:</label>
+        <input type="radio" id="Female" Name="gender" value="Female">
+        </div>
+        <label for="country">Country:</label>
+        <select id="country" name="country">
+            <option value="usa">USA</option>
+            <option value="canada">Canada</option>
+            <option value="uk">UK</option>
+            <option value="india">India</option>
+        </select>
+        </div>
+        <div class="button-group">
+            <input type="submit" value="Register">
+
+        </div>
+    </form>
+    </div>
+    <script src="r.js"></script>
+</body>
+</html>
